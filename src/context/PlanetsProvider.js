@@ -5,7 +5,14 @@ import PlanetsContext from './PlanetsContext';
 
 function PlanetsProvider({ children }) {
   const [planets, setPlanets] = useState({ data: [] }); // [state, setter]
+
   const [filterByName, setFilterByName] = useState({ name: '' });
+
+  const [filterByNumeric, setFilterByNumeric] = useState({
+    column: 'population',
+    comparison: 'maior que',
+    value: '',
+  });
 
   async function getInfosPlanets() {
     const planetsResponse = await fetchPlanets();
@@ -22,6 +29,8 @@ function PlanetsProvider({ children }) {
     getInfosPlanets,
     filterByName,
     setFilterByName,
+    filterByNumeric,
+    setFilterByNumeric,
   };
 
   return (

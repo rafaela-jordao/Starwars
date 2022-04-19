@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import PlanetsContext from '../context/PlanetsContext';
+import Filters from './Filters';
 
 function Table() {
   const { planets: { data },
@@ -19,6 +20,8 @@ function Table() {
           onChange={ (e) => setFilterByName({ name: e.target.value }) }
         />
       </div>
+
+      <Filters />
 
       <table>
         <thead>

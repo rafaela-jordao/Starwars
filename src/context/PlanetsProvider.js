@@ -5,6 +5,7 @@ import PlanetsContext from './PlanetsContext';
 
 function PlanetsProvider({ children }) {
   const [planets, setPlanets] = useState({ data: [] }); // [state, setter]
+  const [filterByName, setFilterByName] = useState({ name: '' });
 
   async function getInfosPlanets() {
     const planetsResponse = await fetchPlanets();
@@ -15,9 +16,12 @@ function PlanetsProvider({ children }) {
     getInfosPlanets();
   }, []);
 
+  // valores provider
   const contextValue = {
     planets,
     getInfosPlanets,
+    filterByName,
+    setFilterByName,
   };
 
   return (

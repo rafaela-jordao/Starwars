@@ -5,6 +5,7 @@ function Filters() {
   const { filterByNumeric,
     setFilterByNumeric,
     handleClick,
+    selectedFilters,
   } = useContext(PlanetsContext);
 
   const { column, comparison, value } = filterByNumeric;
@@ -65,6 +66,15 @@ function Filters() {
       >
         Filtrar
       </button>
+
+      {selectedFilters.map((filter, index) => (
+        <div className="filters" key={ index }>
+          {filter.column}
+          {filter.comparison}
+          {filter.value}
+
+        </div>
+      ))}
 
     </form>
   );

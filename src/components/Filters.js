@@ -2,7 +2,10 @@ import React, { useContext } from 'react';
 import PlanetsContext from '../context/PlanetsContext';
 
 function Filters() {
-  const { filterByNumeric, setFilterByNumeric } = useContext(PlanetsContext);
+  const { filterByNumeric,
+    setFilterByNumeric,
+    handleClick,
+  } = useContext(PlanetsContext);
 
   const { column, comparison, value } = filterByNumeric;
 
@@ -58,6 +61,7 @@ function Filters() {
         type="button"
         id="button-filter"
         name="button-filter"
+        onClick={ handleClick }
       >
         Filtrar
       </button>

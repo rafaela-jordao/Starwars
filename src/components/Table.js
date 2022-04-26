@@ -6,6 +6,7 @@ function Table() {
   const { planets: { data },
     filterByName,
     setFilterByName,
+    handleFilters,
   } = useContext(PlanetsContext);
 
   const { name } = filterByName;
@@ -44,6 +45,7 @@ function Table() {
         <tbody>
           { data
             .filter((planet) => planet.name.toLowerCase().includes(filterByName.name))
+            .filter(handleFilters)
             .map((item) => (
               <tr key={ item.name }>
                 <td>{ item.name }</td>

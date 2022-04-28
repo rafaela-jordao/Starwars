@@ -7,7 +7,6 @@ function Table() {
     filterByName,
     setFilterByName,
     handleFilters,
-    // selectedFilters,
   } = useContext(PlanetsContext);
 
   const { name } = filterByName;

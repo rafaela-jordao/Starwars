@@ -63,6 +63,8 @@ function PlanetsProvider({ children }) {
       comparison: '',
       value: '0',
     });
+    const removeOptions = document.getElementById('column'); // remove a option após ser selecionada
+    removeOptions.remove(removeOptions.selectedIndex);
   };
 
   // dados compartilhados através do provider
@@ -77,7 +79,6 @@ function PlanetsProvider({ children }) {
     setSelectedFilters,
     handleFilters,
     handleClick,
-
   };
 
   return (

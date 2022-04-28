@@ -6,6 +6,7 @@ function Filters() {
     setFilterByNumeric,
     handleClick,
     selectedFilters,
+    setSelectedFilters,
   } = useContext(PlanetsContext);
 
   const { column, comparison, value } = filterByNumeric;
@@ -67,13 +68,46 @@ function Filters() {
         Filtrar
       </button>
 
+      <button
+        data-testid="button-remove-filters"
+        type="button"
+        onClick={ () => {
+          setSelectedFilters([]);
+          setFilterByNumeric({
+            column: '',
+            condition: '',
+            value: '',
+          });
+        } }
+      >
+        Remover Filtros
+
+      </button>
+
       {selectedFilters.map((filter, index) => (
-        <div className="filters" key={ index }>
+        <div
+          data-testid="filter"
+          className="filters"
+          key={ index }
+        >
           {filter.column}
           {filter.comparison}
           {filter.value}
+          <button
+            className="limpar"
+            type="button"
+            onClick={ () => {
+              const cloneArray = [...selectedFilters];
+              cloneArray.splice(index, 1);
+              setSelectedFilters(cloneArray);
+            } }
+          >
+            X
+
+          </button>
 
         </div>
+
       ))}
 
     </form>

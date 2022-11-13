@@ -1,13 +1,30 @@
-# :construction: README customizado em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
+# Projeto Star Wars ✨ 
 
-Para deixá-lo com a sua cara, basta alterar o seguinte arquivo da sua máquina: ~/.student-repo-publisher/custom/_NEW_README.md
+💻 Este projeto foi desenvolvido no módulo de Front-End do curso de Desenvolvimento Web da [Trybe](https://www.betrybe.com/).
 
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+# 🎯 Objetivo
+
+Criar uma aplicação que consulta uma API para recuperar dados dos planetas do universo de Star Wars. Deve-se usar os dados retornados pela API para criar uma tabela com alguns filtros. Os planetas poderão ser filtrados por suas características, como população, período orbital, diâmetro e outras.
+
+# 🧠 Habilidades 
+
+* Utilizar a _Context API_ do **React** para gerenciar estado.
+* Utilizar o _React Hook useState_;
+* Utilizar o _React Hook useContext_;
+* Utilizar o _React Hook useEffect_;
+* Criar _React Hooks_ customizados.
+
+# ✔️ Rodando localmente
+
+1. Clone o repositório
+  * `git clone git@github.com:rafaela-jordao/Starwars.git`
+  * Entre na pasta do repositório que você acabou de clonar:
+    * `cd Starwars`
+
+2. Instale as dependências e inicialize o projeto
+  * Instale as dependências:
+    * `npm install`
+  * Inicialize o projeto:
+    * `npm start`
+
+
